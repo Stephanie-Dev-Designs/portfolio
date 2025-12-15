@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/reset.css" rel="stylesheet">
+        <!-- gf starts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- gf ends -->
+        <link href="./css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <!-- Section 1: Submit Offer -->
+  <section class="section" id="offerSection">
+    <div class="app-wrap">
+      <h2 class="section-title">Submit an Offer</h2>
+      <div class="form-card">
+        <div class="input-row">
+          <label for="buyerInput">Buyer / Agent Name</label>
+          <input id="buyerInput" placeholder="e.g. John Doe / Agent">
+        </div>
+        <div class="input-row">
+          <label for="amountInput">Offer Amount (CAD)</label>
+          <input id="amountInput" type="number" min="0" placeholder="e.g. 825000">
+        </div>
+        <div class="btn-row">
+          <button id="submitBtn" class="btn">Place Offer</button>
+          <button id="clearBtn" class="btn ghost">Clear Offers</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Province, City, Homes Carousel -->
+  <section class="section" id="homeSection">
+    <div class="app-wrap">
+      <h2 class="section-title">Select Province & City</h2>
+
+      <!-- Province & City Select -->
+      <div class="form-card">
+        <div class="input-row">
+          <label for="provinceSelect">Province</label>
+          <select id="provinceSelect">
+            <option value="">-- Select Province --</option>
+          </select>
+        </div>
+        <div class="input-row">
+          <label for="citySelect">City</label>
+          <select id="citySelect">
+            <option value="">-- Select City --</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Carousel of Homes -->
+      <div class="carousel-container">
+        <button id="prevBtn" class="carousel-btn">&#10094;</button>
+        <div class="carousel-track" id="carouselTrack"></div>
+        <button id="nextBtn" class="carousel-btn">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Offers List -->
+  <section class="section" id="offersSection">
+    <div class="app-wrap">
+      <h2 class="section-title" id="selectedHomeName">Offers</h2>
+      <div class="offers-card">
+        <div id="offersList"></div>
+        <div id="emptyNote" class="empty">No offers yet. Place the first offer.</div>
+      </div>
+      <div class="top-stats">
+        <div class="stat" id="highestStat">Highest: —</div>
+        <div class="stat" id="countStat">Offers: 0</div>
+      </div>
+    </div>
+  </section>
+            <script src="./js/main.js"></script>
+        </body>
+    </html>

@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  height: 100vh;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Toolbox Left */
+.toolbox {
+  background: #333;
+  padding: 10px;
+  border-radius: 10px;
+}
+.toolbox h2 {
+  text-align: center;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.draggable {
+  background: #555;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: grab;
+  font-size: 24px;
+}
+.draggable:active {
+  cursor: grabbing;
+}
+
+/* Main Grid */
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 210px);
+  gap: 0;
+  background: #FFF;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Rooms common style */
+.room {
+  background: #111;
+  color: #fff;
+  position: relative;
+  border: 2px solid #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+/* Doors inside rooms */
+.door {
+  position: absolute;
+  background: #fff;
+}
+.door.top {
+  width: 40px;
+  height: 10px;
+  top: 0;
+  left: calc(50% - 20px);
+}
+.door.bottom {
+  width: 40px;
+  height: 10px;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+.door.left {
+  width: 10px;
+  height: 40px;
+  left: 0;
+  top: calc(50% - 20px);
+  background: #333;
+}
+.door.right {
+  width: 10px;
+  height: 40px;
+  right: 0;
+  top: calc(50% - 20px);
+  background: #333;
+}
+
+/* Items inside rooms */
+.room .item {
+  position: absolute;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Color Palette Right */
+.color-palette {
+  background: #333;
+  padding: 10px;
+  border-radius: 10px;
+}
+.color-palette h2 {
+  text-align: center;
+}
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
+}
+.color {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid #555;
+}
+.color-preview {
+  margin-top: 20px;
+  height: 60px;
+  border-radius: 5px;
+  background: #444;
+}

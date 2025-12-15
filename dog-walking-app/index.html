@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Dog Walking App</title>
+</head>
+<body>
+  <!-- AUTH (shown when not logged in) -->
+  <main id="auth" class="auth-view" aria-hidden="false">
+    <div class="auth-card" role="dialog" aria-label="Sign in or sign up">
+      <h1>Bark with Love</h1>
+      <p class="muted">Sign in or create an account to start</p>
+
+      <div class="tabs">
+        <button id="tab-login" class="tab active" aria-pressed="true">Login</button>
+        <button id="tab-signup" class="tab" aria-pressed="false">Sign up</button>
+      </div>
+
+      <form id="form-login" class="form">
+        <label>
+          Username
+          <input id="login-username" required />
+        </label>
+        <label>
+          Password
+          <input id="login-password" type="password" required />
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Login</button>
+        </div>
+      </form>
+
+      <form id="form-signup" class="form hidden" aria-hidden="true">
+        <label>
+          Username
+          <input id="signup-username" required />
+        </label>
+        <label>
+          Display name
+          <input id="signup-display" required />
+        </label>
+        <label>
+          Password
+          <input id="signup-password" type="password" required />
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Create account</button>
+        </div>
+      </form>
+
+      <p class="muted small">This is a local demo — passwords are stored only in your browser (for demo purposes).</p>
+    </div>
+  </main>
+  
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bark — Dog App (Demo)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- AUTH (shown when not logged in) -->
+  <main id="auth" class="auth-view" aria-hidden="false">
+    <div class="auth-card" role="dialog" aria-label="Sign in or sign up">
+      <h1>Bark</h1>
+      <p class="muted">Sign in or create an account to start</p>
+
+      <div class="tabs">
+        <button id="tab-login" class="tab active" aria-pressed="true">Login</button>
+        <button id="tab-signup" class="tab" aria-pressed="false">Sign up</button>
+      </div>
+
+      <form id="form-login" class="form">
+        <label>
+          Username
+          <input id="login-username" required />
+        </label>
+        <label>
+          Password
+          <input id="login-password" type="password" required />
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Login</button>
+        </div>
+      </form>
+
+    
+
+      <p class="muted small">This is a local demo — passwords are stored only in your browser (for demo purposes).</p>
+    </div>
+  </main>
+
+  <!-- APP (shown when logged in) -->
+  <div id="app" class="app hidden" aria-hidden="true">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="logo">🐾</div>
+        <div class="title">Bark</div>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <button class="nav-btn" data-page="dashboard">Dashboard</button>
+        <button class="nav-btn" data-page="calendar">Calendar</button>
+        <button class="nav-btn" data-page="events">Events</button>
+        <button class="nav-btn" data-page="messenger">Messenger</button>
+        <button class="nav-btn" data-page="updates">Updates</button>
+        <button class="nav-btn" data-page="settings">Settings</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="user-mini" id="user-mini"></div>
+        <button id="logoutBtn" class="btn ghost">Logout</button>
+      </div>
+    </aside>
+
+    <div class="main-area">
+      <header class="topbar">
+        <div class="left">
+          <button id="menu-toggle" class="icon-btn" aria-label="Toggle menu">☰</button>
+          <h2 id="page-title">Dashboard</h2>
+        </div>
+        <div class="right">
+          <input id="global-search" placeholder="Search events, contacts..." aria-label="Search"/>
+          <button id="theme-toggle" class="btn icon-btn" aria-pressed="false" title="Toggle theme">🌗</button>
+          <div id="avatar" class="avatar" title="Profile">🐶</div>
+        </div>
+      </header>
+
+      <main id="content" class="content" tabindex="0">
+        <!-- Pages injected/controlled by JS -->
+
+        <!-- Dashboard -->
+        <section id="page-dashboard" class="page">
+          <div class="grid">
+            <div class="card">
+              <h3>Welcome, <span id="welcome-name">Friend</span> 👋</h3>
+              <p class="muted" id="welcome-sub">Ready to schedule a walk?</p>
+              <div class="actions">
+                <button class="btn primary" id="quick-schedule">Schedule Walk</button>
+                <button class="btn" id="open-messenger">New Message</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <h4>Upcoming</h4>
+              <ul id="upcoming-list" class="list muted">
+                <!-- populated by JS -->
+              </ul>
+            </div>
+
+            <div class="card wide">
+              <h4>Quick Add Event</h4>
+              <form id="quick-event-form">
+                <label>Title <input id="qe-title" required /></label>
+                <label>Date <input id="qe-date" type="date" required /></label>
+                <label>Time <input id="qe-time" type="time" required /></label>
+                <div class="form-actions">
+                  <button class="btn primary" type="submit">Add</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- Calendar -->
+        <section id="page-calendar" class="page hidden" aria-hidden="true">
+          <div class="calendar-header">
+            <button id="prev-month" class="icon-btn" aria-label="Previous month">◀</button>
+            <h3 id="calendar-month">Month</h3>
+            <button id="next-month" class="icon-btn" aria-label="Next month">▶</button>
+            <div class="spacer"></div>
+            <button id="add-event-btn" class="btn primary">Add Event</button>
+          </div>
+          <div id="calendar" class="calendar"></div>
+        </section>
+
+        <!-- Events -->
+        <section id="page-events" class="page hidden" aria-hidden="true">
+          <div class="events-header">
+            <h3>Pet Events & Birthdays</h3>
+            <button id="add-bday" class="btn">Add Birthday / Event</button>
+          </div>
+          <div id="events-list" class="cards"></div>
+        </section>
+
+        <!-- Messenger -->
+        <section id="page-messenger" class="page hidden" aria-hidden="true">
+          <div class="messenger-wrap">
+            <aside class="contacts">
+              <div class="contacts-header">
+                <h4>Contacts</h4>
+                <button id="add-contact-btn" class="btn">+ Add</button>
+              </div>
+              <ul id="contacts-list" class="contacts-list"></ul>
+            </aside>
+            <section class="chat-area">
+              <div class="chat-header">
+                <h4 id="chat-title">Select a contact</h4>
+                <div id="chat-actions" class="muted small"></div>
+              </div>
+              <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
+              <form id="chat-form" class="chat-form">
+                <input id="chat-input" placeholder="Type a message..." autocomplete="off"/>
+                <button class="btn primary" type="submit">Send</button>
+              </form>
+            </section>
+          </div>
+        </section>
+
+        <!-- Updates -->
+        <section id="page-updates" class="page hidden" aria-hidden="true">
+          <h3>Updates</h3>
+          <ul id="updates-feed" class="feed"></ul>
+        </section>
+
+        <!-- Settings -->
+        <section id="page-settings" class="page hidden" aria-hidden="true">
+          <h3>Settings</h3>
+          <div class="card">
+            <label>
+              <input type="checkbox" id="toggle-sound" />
+              Message sound
+            </label>
+            <label>
+              <input type="checkbox" id="toggle-notify" checked />
+              In-app reminders
+            </label>
+            <label>
+              Theme:
+              <select id="accent-select">
+                <option value="pink">Deep bright pink</option>
+                <option value="brown">Brown accent</option>
+              </select>
+            </label>
+            <div class="form-actions">
+              <button id="delete-account" class="btn danger">Delete Account</button>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="bottom-nav" id="mobile-nav" aria-hidden="true">
+        <button class="nav-btn" data-page="dashboard">Home</button>
+        <button class="nav-btn" data-page="calendar">Calendar</button>
+        <button class="nav-btn" data-page="messenger">Chat</button>
+        <button class="nav-btn" data-page="events">Events</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Modals and templates -->
+  <div id="modal-root" class="modal-root" aria-hidden="true"></div>
+
+
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+  

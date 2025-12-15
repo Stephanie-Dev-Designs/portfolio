@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/reset.css" rel="stylesheet">
+        <!-- gf starts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <!-- gf ends -->
+        <link href="./css/style.css" rel="stylesheet">
+    </head>
+    <body data-theme="light">
+
+        <header>
+            <div id="date-display"></div>
+            <div class="controls">
+              <button id="theme-toggle">Toggle Theme</button>
+              <select id="season-select">
+                <option value="default">Season</option>
+                <option value="autumn">Autumn</option>
+                <option value="winter">Winter</option>
+                <option value="spring">Spring</option>
+                <option value="summer">Summer</option>
+              </select>
+            </div>
+          </header>
+        
+          <div id="chat-container"></div>
+        
+          <div id="user-list">
+            <input type="text" id="user-input" placeholder="Enter user name">
+            <div class="user-buttons">
+              <button id="add-user">Add User</button>
+              <button id="remove-user">Remove User</button>
+            </div>
+            <div id="users"></div>
+          </div>
+        
+          <div id="input-area">
+            <input type="text" id="message-input" placeholder="Type a message...">
+            <div id="emoticons">
+              <span>😀</span><span>😂</span><span>😎</span><span>😍</span><span>😢</span>
+            </div>
+            <button id="send-btn">Send</button>
+            <button id="clear-chat">Clear Chat</button>
+          </div>
+        
+        <script src="./js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,224 @@
+/* Reset & Body */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    background: linear-gradient(to bottom, #87CEEB 0%, #f0f8ff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main Title */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+    margin-bottom: 20px;
+    line-height: 5;
+}
+
+/* Islands Container */
+.islands {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Individual Island */
+.island {
+    width: 160px;
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    animation: float 3s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+/* Island Float Animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Island Hover */
+.island:hover {
+    transform: scale(1.15);
+    box-shadow: 0 25px 40px rgba(0,0,0,0.6);
+}
+
+/* Island Background Images */
+#html-island { background-image: url(../imgs/island-1.jpeg); }
+#css-island { background-image: url(../imgs/island-2.jpeg); }
+#js-island { background-image: url(../imgs/island-1.jpeg); }
+#animation-island { background-image: url(../imgs/island-2.jpeg); }
+
+/* Challenge Box */
+#challenge-box {
+    width: 90%;
+    max-width: 700px;
+    background-color: #1E90FF; /* ocean blue */
+    margin: 30px auto 0;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Challenge Title */
+#challenge-box .challenge-title {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* Challenge Text */
+#challenge-box .challenge-text {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Textarea */
+#user-answer {
+    width: 90%;
+    min-height: 100px;
+    max-height: 200px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 15px;
+    font-family: "Noto Sans", sans-serif;
+    resize: vertical;
+}
+
+/* Submit Button */
+#submit-answer {
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffb347;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#submit-answer:hover {
+    background-color: #ffd700;
+    transform: scale(1.05);
+}
+
+/* Feedback Message */
+.feedback {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Responsive Layouts */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .islands {
+        gap: 20px;
+    }
+
+    .island {
+        width: 140px;
+        height: 140px;
+        font-size: 14px;
+    }
+
+    #challenge-box {
+        width: 85%;
+        padding: 20px;
+    }
+
+    #challenge-box .challenge-title {
+        font-size: 1.6rem;
+    }
+
+    #challenge-box .challenge-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .islands {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .island {
+        width: 120px;
+        height: 120px;
+        font-size: 13px;
+        padding: 15px;
+    }
+
+    #challenge-box {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #challenge-box .challenge-title {
+        font-size: 1.4rem;
+    }
+
+    #challenge-box .challenge-text {
+        font-size: 1rem;
+    }
+
+    #user-answer {
+        width: 95%;
+    }
+
+    #submit-answer {
+        padding: 8px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Optional Ocean Waves Background */
+body::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50%, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: waves 10s linear infinite;
+    z-index: 0;
+}
+
+@keyframes waves {
+    0% { transform: translate(0,0) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

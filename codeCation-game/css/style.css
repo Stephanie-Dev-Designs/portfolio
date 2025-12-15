@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #4dc3ff, #0077cc);
+    color: #fff;
+    text-align: center;
+  }
+  
+  .game-container {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+
+  p {
+    line-height: 4;
+    letter-spacing: 1.3px;
+    font-family: "Noto Sans", sans-serif;
+  }
+
+  .map {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+  }
+  
+  .island {
+    width: 150px;
+    height: 150px;
+    border: none;
+    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 15px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+  }
+  
+  .island:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Island background images */
+  .island[data-island="html"] {
+    background-image: url('images/html-island.png');
+  }
+  .island[data-island="css"] {
+    background-image: url('images/css-island.png');
+  }
+  .island[data-island="js"] {
+    background-image: url('images/js-island.png');
+  }
+  .island[data-island="animation"] {
+    background-image: url('images/animation-island.png');
+  }
+  
+  #question-container {
+    margin-top: 20px;
+    min-height: 60px;
+    font-size: 18px;
+    color: #000;
+  }
+  
+  #answer {
+    width: 38%;
+    height: 100px;
+    margin-top: 48px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  #submitBtn {
+    margin-top: 6px;
+    padding: 9px 17px 3p;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    letter-spacing: 1.2px;
+    font-family: "Noto Sans", sans-serif;
+  }
+  
+  #score-container {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  #score {
+    letter-spacing: 1.2px;
+    font-family: "Noto Sans", sans-serif;
+  }
+  

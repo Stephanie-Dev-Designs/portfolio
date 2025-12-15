@@ -1,0 +1,124 @@
+/* nav starts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .nav-container {
+    height: 70px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* keeps nav centered */
+    position: relative;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .nav-inner {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  /* logo left */
+  .logo {
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* nav centered */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    /* color: #555; */color: white;
+    font-weight: 600;
+    padding: 6px 4px;
+    transition: color 0.2s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #000;
+    /* border-bottom: 2px solid #484652; */
+    border-bottom: 2px solid #fff;
+  }
+
+  .social {
+    color: black;
+    font-weight: bolder;
+    letter-spacing: 4px;    
+  }
+  
+  /* responsive tweak */
+  @media (max-width: 768px) {
+    nav ul {
+      gap: 15px;
+    }
+  }
+
+/* nav ends */
+
+
+section {
+    width: 100%;
+    height: 80px;
+    background: black;  
+}
+
+/* snow animation starts */
+body {
+    margin: 0;
+    overflow: hidden;
+    background-image: url("../imgs/forest.jpeg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    width: 100%;
+    height:fit-content;
+}
+
+#snowfall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100vh);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
+/* snow animation ends */
+
+
+

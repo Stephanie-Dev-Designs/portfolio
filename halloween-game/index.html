@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Haunted House Mystery</title>
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<!-- home page -->
+<div id="home-page">
+  <div id="background-container">
+    <img src="./imgs/haunted-house.jpg" alt="Haunted House" id="background">
+    <div id="intro-text">
+      <h1>Welcome to the Haunted House</h1>
+      <p>Press Enter to step inside... if you dare.</p>
+    </div>
+  </div>
+  <button id="enter-btn">Enter</button>
+</div>
+
+<!-- games page -->
+<div id="games-page" style="display:none;">
+
+  <!-- top nav starts -->
+  <div id="game-nav">
+    <button id="back-to-home">Back</button>
+    <div id="game-list">
+      <button class="game-btn" data-game="shadow-game">The Shadow in the Corner</button>
+      <button class="game-btn" data-game="garden-game">Garden of Bones</button>
+      <button class="game-btn" data-game="portrait-game">Haunted Portrait Gallery</button>
+    </div>
+  </div>
+  <!-- top nav ends -->
+
+  <!-- shadow game starts  -->
+ <!-- portrait game -->
+  <div id="shadow-game" class="game-container" style="display:none;">
+    <p style="margin-top:60px; text-align:center; color:white;">Shadow Game (Coming Soon)</p>
+  </div>
+    <!-- shadow game ends -->
+
+  <!-- garden of bones -->
+  <div id="garden-game" class="game-container" style="display:none; flex-direction: column;">
+
+    <!-- banner section -->
+    <section id="garden-banner">
+      <div class="banner-content">
+        <h1>Welcome to the Garden of Bones</h1>
+        <p>Collect bones, solve puzzles, and uncover hidden clues!</p>
+      </div>
+    </section>
+
+    <!-- game section -->
+    <section id="garden-game">
+      <h2>Garden of Bones Game</h2>
+      <div id="bone-score">Bones Collected: 0</div>
+      <div id="bone-craft-game"></div>
+      <div id="hidden-bones-container">
+        <span class="hidden-bone">🦴</span>
+        <span class="hidden-bone">🦴</span>
+        <span class="hidden-bone">🦴</span>
+        <span class="hidden-bone">🦴</span>
+      </div>
+    </section>
+  </div>
+
+  <!-- portrait game -->
+  <div id="portrait-game" class="game-container" style="display:none;">
+    <p style="margin-top:60px; text-align:center; color:white;">Haunted Portrait Gallery (Coming Soon)</p>
+  </div>
+
+</div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

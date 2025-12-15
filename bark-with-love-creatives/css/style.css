@@ -1,0 +1,329 @@
+body, html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* nav */
+.nav {
+  width: 100%;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+}
+
+.nav-logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 1.2px;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: centet;
+  gap: 24px; /* Balanced spacing so it fits */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 15.5px;
+  color: #333;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav-links a:hover {
+  color: #e6007e;
+}
+
+.nav-logo a:hover {
+  color: #e6007e;
+}
+/* nav */
+
+/* sections */
+.page-section {
+  height: 800px;
+  width: 100%;
+  padding-top: 90px; /* Offsets fixed nav */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+/* sections */
+
+/* sections colors */
+#story { background: #f9f9f9; }
+#products { background: #fff; }
+#markets { background: #477bea; }
+#rescues { background: #fff; }
+#contact { background: #f9f9f9; }
+/* sections colors */
+
+/* story */
+#story {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+/* Background halves */
+#story::before,
+#story::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+#story::before {
+  top: 0;
+  height: 50%;
+  background: white;
+}
+
+#story::after {
+  bottom: 0;
+  height: 50%;
+  background: #87CCF0; /* light brown */
+}
+
+/* Image on left */
+.story-image {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.story-image img {
+  width: 350px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Text on right */
+.story-text {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-right: 60px;
+  padding-left: 40px;
+  z-index: 2;
+}
+
+.story-text h1 {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.story-text p {
+  font-size: 18px;
+  color: #333;
+  width: 80%;
+  line-height: 1.5;
+}
+
+/* story */
+
+/* products */
+.product-section {
+  height: 100vh;
+  width: 100%;
+  padding-top: 90px; /* offset for your nav */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+.product-section h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.product-row {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-row img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+/* products */
+
+/* markets */
+.markets-section {
+  height: 500px;
+  width: 100%;
+  padding-top: 90px; /* offset if you have a fixed nav */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.markets-section h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px; /* space between title and paragraph */
+}
+
+.markets-section p {
+  font-size: 18px;
+  color: #555;
+  max-width: 600px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* snow */
+ #snowfall {
+    position: fixed; /*changed from absolute to fixed*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    pointer-events: none;
+}
+
+.snowflake {
+    position: fixed; /*changed from absolute to fixed*/
+    width: 5px;
+    height: 5px; /*change to 500px & you have paint */
+    background-color: #fff;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-100vh); 
+    }
+    to {
+        transform: translateY(100vh); 
+    }
+}
+/* snow animation ends */
+/* markets */
+
+/* rescues */
+/* rescues */
+
+/* contact */
+.contact-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* centers both blocks horizontally */
+  align-items: center;     /* centers both blocks vertically */
+  gap: 80px;               /* space between left and right */
+  padding-top: 90px;       /* offset if you have fixed nav */
+  background: #f9f9f9;
+  font-family: "Roboto", sans-serif;
+}
+
+.contact-left {
+  width: 400px;
+}
+
+.contact-left h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 14px;
+}
+
+.contact-left p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.contact-right {
+  width: 400px;
+}
+
+.contact-right h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: #e6007e;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #c2006b;
+}
+/* contact */

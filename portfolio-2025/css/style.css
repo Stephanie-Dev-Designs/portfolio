@@ -1,0 +1,162 @@
+body, html {
+    scroll-behavior: smooth;
+}
+
+.nav-container {
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+  text-decoration: none;
+  letter-spacing: 1.2px;
+  white-space: nowrap;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+.logo:hover {
+    color: #438F37;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  transition: 0.3s;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav-links a:hover {
+  color: #438F37;
+}
+
+.banner {
+  width: 100%;
+  height: 450px;
+  background: url('../imgs/bg-hb.jpeg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 1.4s ease-in-out;
+}
+
+.banner.show {
+  opacity: 1;
+}
+
+.banner-content h1 {
+  font-size: 34px;
+  color: white;
+  margin-bottom: 12px;
+  letter-spacing: 1.2px;
+}
+
+.banner-content p {
+    font-size: 16px;
+    color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeText 2s forwards 0.8s;
+    line-height: 2;
+    letter-spacing: 1.2px;
+    padding: 20px;
+}
+
+@keyframes fadeText {
+  to {
+    opacity: 1;
+  }
+}
+/* ends */
+
+/* story starts */
+.story-sec {
+  width: 100%;
+  height: 500px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.story-img img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.story-content {
+  max-width: 500px;
+}
+
+.story-content h1 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  letter-spacing: 1.2px;
+  color: #333;
+    font-family: "Roboto", sans-serif;
+}
+
+.story-content p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Fade In Animation */
+.fade-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.fade-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* story ends */
+
+/* proj starts */
+#proj-sec {
+    width: 100%;
+    height: 400px;
+}
+/* proj ends */
+
+/* contact starts */
+#contact-sec {
+    width: 100%;
+    height: 400px;
+}
+/* contact ends */

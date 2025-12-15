@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fdfdfd;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header & Nav */
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.moodboard-title {
+  font-size: 1.8rem;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+.moodboard-title a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.moodboard-title a:hover {
+  opacity: 0.7;
+}
+
+/* nav items starts */
+
+.season-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.season-nav li {
+  cursor: pointer;
+  font-weight: bold;
+  color: #555;
+  transition: color 0.3s;
+}
+
+/* Hover colors per season */
+.season-nav li:nth-child(1):hover { color: #FF8C00; }
+.season-nav li:nth-child(2):hover { color: #1E90FF; }
+.season-nav li:nth-child(3):hover { color: #FF69B4; }
+.season-nav li:nth-child(4):hover { color: #32CD32; }
+
+/* Main Moodboard */
+.moodboard-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+  position: relative;
+  height: 900px;
+}
+
+/* Masonry layout */
+.image-grid {
+  column-count: 4;
+  column-gap: 10px;
+}
+
+@media (max-width: 900px) { .image-grid { column-count: 2; } }
+@media (max-width: 600px) { .image-grid { column-count: 1; } }
+
+.img-box {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.img-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.img-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.7s ease;
+}
+
+.img-box:hover img {
+  transform: scale(1.03);
+}
+
+/* Circles */
+.season-circles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+  gap: 8px;
+}
+
+.circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+/* Info box */
+.image-info {
+  margin-top: 25px;
+  display: none;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.image-info.show {
+  display: block;
+  opacity: 1;
+}
+
+.image-info h2 {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #3a2f2a;
+}
+
+.image-info p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}

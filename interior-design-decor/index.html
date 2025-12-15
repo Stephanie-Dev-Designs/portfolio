@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/reset.css" rel="stylesheet">
+        <link href="./css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <!-- Left Toolbox -->
+            <div class="toolbox">
+              <h2>Plants & Objects</h2>
+              <div class="items">
+                <div class="draggable" draggable="true" data-type="plant">🌿</div>
+                <div class="draggable" draggable="true" data-type="tree">🌳</div>
+                <div class="draggable" draggable="true" data-type="lamp">💡</div>
+              </div>
+            </div>
+          
+            <!-- Main Room Grid -->
+            <div class="main-grid">
+              <div class="room" data-room="Living Room">Living Room
+                <div class="door bottom"></div>
+              </div>
+              <div class="room" data-room="Dining Room">Dining Room
+                <div class="door left"></div>
+                <div class="door bottom"></div>
+              </div>
+              <div class="room" data-room="Kitchen">Kitchen
+                <div class="door top"></div>
+                <div class="door bottom"></div>
+              </div>
+              <div class="room" data-room="Bathroom 1">Bathroom 1
+                <div class="door top"></div>
+                <div class="door right"></div>
+              </div>
+              <div class="room" data-room="Bedroom 1">Bedroom 1
+                <div class="door top"></div>
+              </div>
+              <div class="room" data-room="Bedroom 2">Bedroom 2
+                <div class="door left"></div>
+                <div class="door right"></div>
+              </div>
+              <div class="room" data-room="Bathroom 2">Bathroom 2
+                <div class="door left"></div>
+                <div class="door top"></div>
+              </div>
+              <div class="room" data-room="Pet Bedroom">Office
+                <div class="door left"></div>
+              </div>
+            </div>
+          
+            <!-- Right Color Palette -->
+            <div class="color-palette">
+              <h2>Room Colors</h2>
+              <div class="colors">
+                <div class="color" style="background:#f28b82;"></div>
+                <div class="color" style="background:#fbbc04;"></div>
+                <div class="color" style="background:#34a853;"></div>
+                <div class="color" style="background:#4285f4;"></div>
+                <div class="color" style="background:#9c27b0;"></div>
+                <div class="color" style="background:#FFFFFF;"></div>
+              </div>
+              <div class="color-preview"></div>
+            </div>
+          </div>
+          
+          
+        <script src="./js/main.js"></script>
+    </body>
+</html>

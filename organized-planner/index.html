@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/style.css" rel="stylesheet">
+        <link href="./css/style.css" rel="stylesheet">
+    </head>
+    <body>
+      <div class="app-container">
+        <header>
+          <h1>My Organized Planner</h1>
+          <div class="header-tools">
+            <input id="search-bar" type="text" placeholder="Search notes, journal, tasks...">
+            <button id="theme-toggle">🌙</button>
+          </div>
+        </header>
+    
+        <main>
+          <!-- LEFT SIDE -->
+          <aside class="left-panel">
+            <div class="calendar monthly">
+              <h2 id="month-year"></h2>
+              <div id="month-days" class="calendar-grid"></div>
+            </div>
+    
+            <div class="calendar weekly">
+              <h3>Weekly Notes</h3>
+              <div id="week-notes"></div>
+              <div class="button-group">
+                <button id="save-week">Save</button>
+                <button id="clear-week">Clear</button>
+              </div>
+            </div>
+          </aside>
+    
+          <!-- CENTER -->
+          <section class="center-panel">
+            <div class="journal">
+              <h3>Journal / Organizer</h3>
+              <textarea id="journal-text" placeholder="Write your thoughts, goals, or reflections..."></textarea>
+              <div class="button-group">
+                <button id="save-journal">Save</button>
+                <button id="clear-journal">Delete</button>
+              </div>
+            </div>
+    
+            <div class="quote-box">
+              <h3>Motivational Quote of the Day</h3>
+              <p id="quote-text"></p>
+              <p id="quote-author"></p>
+              <button id="new-quote">New Quote</button>
+            </div>
+          </section>
+    
+          <!-- RIGHT SIDE -->
+          <aside class="right-panel">
+            <div class="todo">
+              <h3>To-Do List</h3>
+              <div class="button-group">
+                <input type="text" id="todo-input" placeholder="Add a task...">
+                <button id="add-todo">Add</button>
+              </div>
+              <ul id="todo-list"></ul>
+            </div>
+    
+            <div class="budget">
+              <h3>Budget Tracker</h3>
+              <input type="text" id="budget-desc" placeholder="Description">
+              <input type="number" id="budget-amount" placeholder="Amount">
+              <select id="budget-type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+              </select>
+              <button id="add-budget">Add</button>
+              <ul id="budget-list"></ul>
+              <p id="budget-total">Total: $0</p>
+            </div>
+          </aside>
+        </main>
+      </div>
+    
+      <!-- Custom Popup -->
+      <div id="popup-overlay">
+        <div id="popup">
+          <h3 id="popup-title"></h3>
+          <textarea id="popup-text" placeholder="Write a note for this date..."></textarea>
+          <div class="button-group">
+            <button id="popup-save">Save</button>
+            <button id="popup-close">Close</button>
+          </div>
+        </div>
+      </div>
+    
+        <script src="./js/main.js"></script>
+    </body>
+</html>

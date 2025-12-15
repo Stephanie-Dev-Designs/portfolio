@@ -1,0 +1,381 @@
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --bg: #eef2f3;
+  --text: #333;
+  --card: #fff;
+  --accent: #4b6cb7;
+  --accent-dark: #182848;
+}
+
+body.dark {
+  --bg: #1f1f1f;
+  --text: #eaeaea;
+  --card: #2c2c2c;
+  --accent: #6b9dfc;
+  --accent-dark: #C47DFC;
+}
+
+/* =========================
+   BASE STYLES
+========================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+}
+
+.app-container {
+  width: 95%;
+  max-width: 1400px;
+  margin: 10px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  background: #6B4947;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  white-space: nowrap; /* keep on one line */
+}
+
+/* Header tools container */
+.header-tools {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: flex-start; /* mobile default */
+  flex-wrap: wrap;
+}
+
+#search-bar {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+#theme-toggle {
+  background: #fff;
+  color: var(--accent-dark);
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+}
+
+.left-panel,
+.center-panel,
+.right-panel {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   INPUTS & BUTTONS
+========================= */
+textarea,
+input,
+select {
+  width: 95%; /* reduced width to avoid overlap */
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: var(--card);
+  color: var(--text);
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  width: 27%;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: var(--accent-dark);
+}
+
+/* =========================
+   CALENDAR
+========================= */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.calendar-grid div {
+  padding: 6px;
+  background: var(--card);
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  font-size: 0.85rem;
+}
+
+.calendar-grid div:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* =========================
+   JOURNAL
+========================= */
+#journal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#journal-list div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
+}
+
+#journal-list div:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateX(2px);
+}
+
+#journal-list button {
+  background: var(--accent-dark);
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* =========================
+   TODO & BUDGET
+========================= */
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  background: var(--card);
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Input rows for budget & todo */
+.right-panel .button-group input,
+.right-panel .button-group select {
+  flex: 1 1 auto;
+  max-width: 110px; /* reduced width to fit */
+  margin-right: 8px;
+}
+
+.right-panel .button-group button {
+  flex: 0 0 auto;
+}
+
+/* =========================
+   POPUP
+========================= */
+#popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+#popup-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#popup {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 350px;
+  text-align: center;
+  transform: scale(0.9);
+  transition: transform 0.3s;
+}
+
+#popup-overlay.show #popup {
+  transform: scale(1);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* Mobile-first: everything stacks */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  .calendar-grid div {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  #popup {
+    width: 95%;
+  }
+
+  .right-panel .button-group input,
+  .right-panel .button-group select {
+    max-width: 95%; /* fits mobile better */
+    margin-right: 0;
+  }
+}
+
+/* Tablet: 2 columns, header tools right */
+@media (min-width: 769px) and (max-width: 1024px) {
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .left-panel,
+  .center-panel,
+  .right-panel {
+    flex: 1 1 48%;
+  }
+
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* title left, tools right */
+  }
+
+  .header-tools {
+    justify-content: flex-end;
+  }
+
+  #search-bar {
+    flex: 0 0 200px;
+  }
+
+  textarea,
+  input,
+  select {
+    width: 90%; /* fit tablet */
+  }
+}
+
+/* Desktop: 3-column grid, header tools right */
+@media (min-width: 1025px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+  }
+
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* title left, tools right */
+  }
+
+  .header-tools {
+    justify-content: flex-end;
+  }
+
+  #search-bar {
+    flex: 0 0 250px;
+  }
+
+  textarea,
+  input,
+  select {
+    width: 90%; /* fit desktop */
+  }
+}

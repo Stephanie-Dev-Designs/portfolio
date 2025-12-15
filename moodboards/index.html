@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Moodboards</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/reset.css" rel="stylesheet">
+        <!-- gf starts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <!-- gf ends -->
+        <link href="./css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+    
+      <header class="nav-header">
+        <h1 class="moodboard-title">Moodboard</h1>
+        <nav class="season-nav">
+          <ul>
+            <li data-season="autumn">Autumn</li>
+            <li data-season="winter">Winter</li>
+            <li data-season="spring">Spring</li>
+            <li data-season="summer">Summer</li>
+          </ul>
+        </nav>
+      </header>
+      
+      <div class="moodboard-container">
+        <div class="image-grid" id="image-grid">
+          <!-- Images injected by JS -->
+        </div>
+      
+        <div class="season-circles" id="season-circles">
+          <!-- Circles injected by JS -->
+        </div>
+      
+        <div class="image-info" id="image-info">
+          <h2 id="info-title"></h2>
+          <p id="info-text"></p>
+        </div>
+      </div>
+      
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>

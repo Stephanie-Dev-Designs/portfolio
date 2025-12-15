@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Animated Carousel</title>
+</head>
+  <body>
+  <div class="carousel-container">
+    <button class="carousel-arrow prev" aria-label="Previous slides">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </button>
+
+    <div class="carousel-wrap">
+      <div class="carousel-track">
+        <div class="carousel-item" data-caption="Wolves roam through forests and tundra with quiet strength, moving in packs and showcasing the wild spirit of nature.">
+          <img src="./imgs/wolves.jpeg" alt="">
+        </div>
+        <div class="carousel-item" data-caption="Puffins on Grand Manan Island spend much of their lives at sea, diving and swimming skillfully in the ocean to catch fish. They return to the rocky cliffs of the island to nest, where they raise their chicks and maintain strong colony connections. In the wild, puffins are agile, social birds that thrive between their ocean habitat and cliffside homes.">
+          <img src="./imgs/puffin-bird.jpeg" alt="">
+        </div>
+        <div class="carousel-item" data-caption="Orcas in the wild live in oceans around the world, often traveling long distances in search of food. They dive to impressive depths, exploring the sea with agility and grace. Highly social, they live in tight-knit family pods, showing caring and protective behavior toward one another. While they are skilled hunters, they are not mindless ‘killers of the sea’—their intelligence and strong family bonds make them one of the most fascinating and affectionate marine mammals in their natural habitat.">
+          <img src="./imgs/orca.jpeg" alt="">
+        </div>
+        <div class="carousel-item" data-caption="Bears live in forests, mountains, and river valleys, often roaming long distances in search of food. They are mostly solitary but can show playful or protective behavior, especially mothers with cubs. In the wild, bears rely on their environment for berries, fish, and shelter, adapting to the changing seasons and terrain around them.">
+          <img src="./imgs/bear.jpeg" alt="">
+        </div>
+        <div class="carousel-item" data-caption="Prince Edward Island’s beaches showcase golden sands, rocky outcrops, and warm, colorful waters, creating a stunning and scenic coastline.”">
+          <img src="./imgs/beach.jpeg" alt="">
+        </div>
+        <div class="carousel-item" data-caption="Croatia’s waterfalls cascade through lush green landscapes, creating sparkling pools and misty rainbows. Surrounded by forests and rocky cliffs, they offer a serene escape where nature’s beauty and tranquility come together and makes it a peaceful and beautiful natural escape.">
+          <img src="./imgs/waterfalls.jpeg" alt="">
+        </div>
+        <div class="carousel-item" data-caption="Iceland’s ice caves are natural wonders formed each winter within the island’s glaciers. With crystal-blue walls, frozen tunnels, and shifting light, they offer a surreal glimpse into the heart of timeless ice shaped by nature.">
+          <img src="./imgs/iceland-ice-cave.jpeg" alt="">
+        </div>
+        <div class="carousel-item" data-caption="The northern lakes of Canada are framed by rugged rocky landscapes, with crystal-clear waters reflecting the surrounding cliffs and pine forests. The remote scenery offers a sense of untouched wilderness and tranquil beauty.">
+          <img src="./imgs/nature.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-arrow next" aria-label="Next slides">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="preview-wrap" aria-live="polite"></div>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

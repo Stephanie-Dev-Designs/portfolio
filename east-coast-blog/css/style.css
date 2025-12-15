@@ -1,0 +1,231 @@
+/* =========================
+   ROOT VARIABLES START
+========================= */
+:root {
+  --sand: #F3E9D2;
+  --seafoam: #A9D6C6;
+  --navy: #1B3B5F;
+  --red: #C8524C;
+  --white: #FFFDF9;
+  --text: #3f2b2b;
+  --muted: #7a5b58;
+}
+/* =========================
+   ROOT VARIABLES END
+========================= */
+
+/* =========================
+   GLOBAL RESET START
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--text);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+/* =========================
+   GLOBAL RESET END
+========================= */
+
+/* =========================
+   NAVIGATION START
+========================= */
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--navy);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.nav-header .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+}
+.nav-links a {
+  color: var(--white);
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--white);
+}
+/* Responsive nav */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--navy);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+  .nav-links a {
+    margin: 0.5rem 0;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+}
+/* =========================
+   NAVIGATION END
+========================= */
+
+/* =========================
+   HERO START
+========================= */
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-text {
+  text-align: center;
+  color: var(--white);
+  background: rgba(27, 59, 95, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.hero p {
+  font-size: 1.5rem;
+}
+/* =========================
+   HERO END
+========================= */
+
+/* =========================
+   ABOUT START
+========================= */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  background-color: var(--sand);
+  gap: 2rem;
+  align-items: center;
+}
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+.about-text {
+  flex: 1;
+}
+.about-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+/* =========================
+   ABOUT END
+========================= */
+
+/* =========================
+   FEATURED POSTS START
+========================= */
+.featured-posts {
+  padding: 4rem 2rem;
+}
+.featured-posts h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--navy);
+}
+.post-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.post-card {
+  background-color: var(--white);
+  flex: 1 1 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.post-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.post-card h3 {
+  margin: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+}
+.post-card p {
+  margin: 0 1rem 1rem 1rem;
+  color: var(--muted);
+}
+/* =========================
+   FEATURED POSTS END
+========================= */
+
+/* =========================
+   NEWSLETTER START
+========================= */
+.newsletter {
+  background-color: var(--seafoam);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.newsletter h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.newsletter form {
+  margin-top: 1rem;
+}
+.newsletter input[type="email"] {
+  padding: 0.7rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+.newsletter button {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  background-color: var(--red);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+.hidden {
+  display: none;
+}
+/* =========================
+   NEWSLETTER END
+========================= */

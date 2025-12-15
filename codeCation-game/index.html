@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/reset.css" rel="stylesheet">
+        <!-- gf starts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
+        <!-- gf ends -->
+        <link href="./css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="game-container">
+            <h1>Code 🌴 cation</h1>
+            <p>Click an island to get a coding question!</p>
+        
+
+            
+            <div class="map">
+              <button class="island" data-island="html">HTML Island</button>
+              <button class="island" data-island="css">CSS Island</button>
+              <button class="island" data-island="js">JavaScript Island</button>
+              <button class="island" data-island="animation">Animation Island</button>
+            </div>
+        
+            <div id="question-container"></div>
+            <textarea id="answer" placeholder="Write your code here"></textarea>
+            <button id="submitBtn">Submit Answer</button>
+        
+            <div id="score-container">Score: <span id="score">0</span></div>
+          </div>
+
+
+        <script src="./js/main.js"></script>
+    </body>
+</html>
