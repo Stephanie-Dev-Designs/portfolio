@@ -1,1 +1,2 @@
-# portfolio
+### portfolio
+updated portfolio readme details
